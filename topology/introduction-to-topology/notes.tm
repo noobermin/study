@@ -65,37 +65,47 @@
 
   <subsection|Section 1>
 
+  <subsection|Discussion>
+
+  <subsubsection|Compactness as Closed and Boundedness>
+
   So, our pal says every closed and bounded subset <math|A> of
   <math|\<bbb-R\>>, if one has a collection of open subsets of said <math|A>,
   then there is a finite subcollection that covers <math|A.> So,
   intuitionally, I'll define something that might describe this
-  (unfortunately, I'm too lazy to make it concrete, bear with me...) Consider
-  the <math|<around*|[|0,1|]>\<subset\>\<bbb-R\>>, and consider the set of
-  open sets from <math|<around*|(|0-\<varepsilon\>,1/2+\<varepsilon\>|)>,<around*|(|1/2-\<varepsilon\>,1/4+\<varepsilon\>|)>,\<ldots\>,<around*|(|1/2<rsup|n>-\<varepsilon\>,1/2<rsup|n+1>+\<varepsilon\>|)>>,
+  <around|(|unfortunately, I'm too lazy to make it too concrete, bear with
+  me...|)> Consider the <math|<around*|[|0,1|]>\<subset\>\<bbb-R\>>, and
+  consider the set of open sets from <math|<around*|(|0-\<varepsilon\>,1/2+\<varepsilon\>|)>,<around*|(|1/2-\<varepsilon\>,1/4+\<varepsilon\>|)>,\<ldots\>,<around*|(|1/2<rsup|n>-\<varepsilon\>,1/2<rsup|n+1>+\<varepsilon\>|)>>,
   obviously defineable for any natural number <math|n> and real number
-  <math|\<varepsilon\>>. This is not uncountable, but it is inifinite.
-  Basically, the idea here is that we have a set of open ranges that overlap
-  and span smaller and smaller ranges from 1/2 to 1, obsensively. This
-  supposes then, that for a given <math|\<varepsilon\>>, there is a <math|n>
-  for which this subset covers <math|<around*|[|0,1|]>>. Clearly, when this
-  is given by the constraint
+  <math|\<varepsilon\>>. For a given <math|\<varepsilon\>>, this defines an
+  open cover of the interval <math|<around*|[|0,1|]>>, by including all
+  <math|n\<in\>\<bbb-N\>> in this open cover. This is not uncountable, but it
+  is inifinite. Basically, the idea here is that we have a set of open ranges
+  that overlap and span smaller and smaller ranges from 1/2 to 1,
+  obstensively. This supposes then, that for a given <math|\<varepsilon\>>,
+  there is a single, be it large, <math|n<rprime|'>> for which the sets from
+  <math|<around*|(|0-\<varepsilon\>,1/2+\<varepsilon\>|)>> to
+  <math|<around*|(|1/2<rsup|n<rprime|'>>-\<varepsilon\>,1/2<rsup|n<rprime|'>+1>+\<varepsilon\>|)>>
+  covers <math|<around*|[|0,1|]>>. Clearly, when the <math|n<rprime|'>> we
+  need is given by the constraint
 
   <\eqnarray*>
     <tformat|<table|<row|<cell|<frac|1|2<rsup|n+1>>+\<varepsilon\>>|<cell|\<gtr\>>|<cell|1>>>>
   </eqnarray*>
 
-  which is solveable for a given <math|\<varepsilon\>> and <math|n>. More
-  importantly, for a fixed <math|\<varepsilon\>>, <math|n> can be defined, as
-  any integer <math|n>
+  which is solveable for a given <math|\<varepsilon\>>. More importantly, for
+  a fixed <math|\<varepsilon\>>, <math|n> can be defined, as any integer
+  <math|n>
 
   <\eqnarray*>
     <tformat|<table|<row|<cell|n>|<cell|\<gtr\>>|<cell|log<rsub|2><around*|(|<frac|1|1-\<varepsilon\>>|)>-1.>>>>
   </eqnarray*>
 
   For <math|\<varepsilon\>=1>, the subset
-  <math|<around*|(|-1,1/2+1|)>\<equiv\><around*|(|-1,1.5|)>> itself is an
-  element and covers <math|<around*|[|0,1|]>>, and this needs not be solved.
-  So, this shows that as large as <math|n> can be, <math|n> will be finite.
+  <math|<around*|(|-1,1/2+1|)>\<equiv\><around*|(|-1,1.5|)>> itself is a set
+  of the collection and covers <math|<around*|[|0,1|]>>, and the above
+  equation needs not be solved. So, this shows that, even if
+  <math|n<rprime|'>> will be large , <math|n<rprime|'>> will be finite.
 
   The idea, odd as it is (and I'll probably have to prove it some point for
   <math|\<bbb-R\>>), <em|any> bounded, closed subset of <math|\<bbb-R\>> can
@@ -103,8 +113,33 @@
   metric open sets. Compactness takes this concept, a little more specific
   than the idea of boundedness (closed-ness is okay, since we have that for
   your vanilla topological space), and says, if you got this for your
-  topo-space, then you'll get all this awesome stuff too. That's the purpose
-  of compactness, I suppose.
+  topo-space, then you'll get all this awesome stuff too. It's a
+  characteristic of topological spaces you can add on, similar to how you can
+  add on connectedness.
+
+  <subsubsection|Compactness as...compactness>
+
+  Something that helps is when things in math (or physics (or computer
+  science (or...))) are named based on something familiar that is analogous
+  to it. Obviously, groups and rings are violations of this, but open and
+  closed match well. Something that might hurt my understand of compactness
+  is that closed and bounded doesn't sound ``compact'' and neither does ``has
+  the property where ever open cover has a finite sub-cover'' sound like
+  ``compact'' In fact, compact seems to imply ``full'' or ``dense,'' while
+  ``finite sub-cover'' seems to imply that it isn't as dense as it sounds.
+
+  Another way to think of compactness is the idea of an accumulation point.
+  The idea is that one can always find subsets of a given compact set that
+  get ``arbitrarly close'' to these points, kind of like limits from baby's
+  calculus (accumulation points are often termed limit points, I think). This
+  idea, that you can always have a subset that gets close to a point in a
+  compact set sounds more ``compact'', in that you have then, an infinite
+  number of subsets that approach a given point. Apparently, these two
+  definitions, an accumulation point, and ``finite subcoverable'' are
+  equivalent for metric spaces, and I think, general compact spaces too(?).
+  We'll see.
+
+  \;
 </body>
 
 <\initial>
@@ -121,6 +156,9 @@
     <associate|auto-4|<tuple|1.1.1|?|../../../../.TeXmacs/texts/scratch/no_name_2.tm>>
     <associate|auto-5|<tuple|2|?|../../../../.TeXmacs/texts/scratch/no_name_2.tm>>
     <associate|auto-6|<tuple|2.1|?|../../../../.TeXmacs/texts/scratch/no_name_2.tm>>
+    <associate|auto-7|<tuple|2.2|?|../../../../.TeXmacs/texts/scratch/no_name_2.tm>>
+    <associate|auto-8|<tuple|2.2.1|?|../../../../.TeXmacs/texts/scratch/no_name_2.tm>>
+    <associate|auto-9|<tuple|2.2.2|?|../../../../.TeXmacs/texts/scratch/no_name_2.tm>>
   </collection>
 </references>
 
