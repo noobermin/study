@@ -139,7 +139,44 @@
   equivalent for metric spaces, and I think, general compact spaces too(?).
   We'll see.
 
-  \;
+  <subsubsection|Exercises>
+
+  <\enumerate-numeric>
+    <item>Prove that the real line <math|\<bbb-R\>> is not compact.
+
+    It suffices to consider a given open cover that does not have a finite
+    subcover. An obvious example is the open cover
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|U<rsub|n>>|<cell|=>|<cell|<around*|(|n-1,n+1|)>>>>>
+    </eqnarray*>
+
+    where <math|n\<in\>\<bbb-Z\>>. This is an open cover in the usual
+    topology, since any real number can be stated as a integer part added
+    with a fractional part, and if a given real number <math|x> has an
+    integer part <math|n>, then <math|x\<in\>U<rsub|n>>, which we won't
+    prove. Consider if there were a finite subcover of this
+    <math|<around*|{|U<rsub|n>|}><rsub|n\<in\>\<bbb-Z\>>,> and thus, by the
+    text on page 159 after definition 2.4, there is a subset <math|A> of
+    <math|\<bbb-Z\>> that for <math|n\<in\>A>,
+    <math|<big|cup><rsub|n\<in\>A>U<rsub|n>=\<bbb-R\>>. By the well-ordering
+    of <math|\<bbb-Z\>>, and since <math|A> is finite, there exists a maximal
+    <math|n<rsub|max>\<in\>A> such that <math|n\<less\>n<rsub|max>> for all
+    <math|n\<in\>A>. However, <math|n<rsub|max>+1> is a real number and is
+    not in any <math|<around*|{|U<rsub|n>|}><rsub|n\<in\>A>>, and so we
+    cannot have a finite subcover of <math|<around*|{|U<rsub|n>|}><rsub|n\<in\>\<bbb-Z\>>.>
+
+    <item>Prove that every finite subset of a topological space is compact.
+
+    Consider a topological space <math|X> with <math|U\<subseteq\>X> which is
+    finite. <math|U= \<varnothing\>> is trivial (<math|\<varnothing\>> is
+    compact since it is closed), so for a non-empty, finite subset <math|U>,
+    consider a open cover <math|<around*|{|V<rsub|i>|}><rsub|i\<in\>I>> of
+    <math|U>. Thus, for each <math|x\<in\>U>, there is at least one
+    <math|i<rsub|x>\<in\>I> such that <math|x\<in\>V<rsub|i<rsub|x>>>. Thus,
+    one can obtain a set of <math|i<rsub|x>\<in\>I> for each <math|x\<in\>U>,
+    and since <math|U> is finite, <math|i<rsub|x>> is finite.
+  </enumerate-numeric>
 </body>
 
 <\initial>
@@ -150,15 +187,16 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|?|?|../../../../.TeXmacs/texts/scratch/no_name_2.tm>>
-    <associate|auto-2|<tuple|1|?|../../../../.TeXmacs/texts/scratch/no_name_2.tm>>
-    <associate|auto-3|<tuple|1.1|?|../../../../.TeXmacs/texts/scratch/no_name_2.tm>>
-    <associate|auto-4|<tuple|1.1.1|?|../../../../.TeXmacs/texts/scratch/no_name_2.tm>>
-    <associate|auto-5|<tuple|2|?|../../../../.TeXmacs/texts/scratch/no_name_2.tm>>
-    <associate|auto-6|<tuple|2.1|?|../../../../.TeXmacs/texts/scratch/no_name_2.tm>>
-    <associate|auto-7|<tuple|2.2|?|../../../../.TeXmacs/texts/scratch/no_name_2.tm>>
-    <associate|auto-8|<tuple|2.2.1|?|../../../../.TeXmacs/texts/scratch/no_name_2.tm>>
-    <associate|auto-9|<tuple|2.2.2|?|../../../../.TeXmacs/texts/scratch/no_name_2.tm>>
+    <associate|auto-1|<tuple|?|?>>
+    <associate|auto-10|<tuple|2.2.3|?>>
+    <associate|auto-2|<tuple|1|?>>
+    <associate|auto-3|<tuple|1.1|?>>
+    <associate|auto-4|<tuple|1.1.1|?>>
+    <associate|auto-5|<tuple|2|?>>
+    <associate|auto-6|<tuple|2.1|?>>
+    <associate|auto-7|<tuple|2.2|?>>
+    <associate|auto-8|<tuple|2.2.1|?>>
+    <associate|auto-9|<tuple|2.2.2|?>>
   </collection>
 </references>
 
@@ -169,9 +207,37 @@
       needs to be \ done> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
 
-      <with|par-left|<quote|2tab>|1<space|2spc>Exercises
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Chapter
+      1> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-2><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|1.1<space|2spc>Section 1
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-2>>
+      <no-break><pageref|auto-3>>
+
+      <with|par-left|<quote|2tab>|1.1.1<space|2spc>Exercises
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-4>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Chapter
+      5> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-5><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|2.1<space|2spc>Section 1
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-6>>
+
+      <with|par-left|<quote|1tab>|2.2<space|2spc>Discussion
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-7>>
+
+      <with|par-left|<quote|2tab>|2.2.1<space|2spc>Compactness as Closed and
+      Boundedness <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-8>>
+
+      <with|par-left|<quote|2tab>|2.2.2<space|2spc>Compactness
+      as...compactness <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-9>>
     </associate>
   </collection>
 </auxiliary>
