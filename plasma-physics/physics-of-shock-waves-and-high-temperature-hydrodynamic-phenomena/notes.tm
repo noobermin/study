@@ -1,9 +1,9 @@
-<TeXmacs|1.99.2>
+<TeXmacs|1.99.4>
 
 <style|generic>
 
 <\body>
-  <section|Chapter 1>
+  <name|><section|Chapter 1>
 
   <subsection|Section 1>
 
@@ -29,8 +29,8 @@
       t><around*|(|f|)>>|<cell|=>|<cell|cos 2t>>>>
     </eqnarray*>
 
-    Note that if we did a partial derivative, which really means ``keep other
-    variables, like <math|x> and <math|y> constant, and take a derivative,''
+    Note that if we did a partial derivative, which really means \Pkeep other
+    variables, like <math|x> and <math|y> constant, and take a derivative,\Q
     this wouldn't be right. This is important, because in solving DE's, we
     often don't know <math|x> or <math|y>, and generally, any function of
     time, so it'd be nice if we could take implicit derivatives, and leave
@@ -114,11 +114,11 @@
     <math|D\<rho\>/D t=0>, due to the fact mass does not accumulate over time
     (density is constant). Instead, te fluid just moves. We can under (1.4)
     in this light, by saying that the velocity field is divergence-less
-    implies that the ``flow lines'' of velocity, (basically, the path of
-    fluid parts) doesn't have sources or sinks, it doesn't ``clump up'' or
+    implies that the \Pflow lines\Q of velocity, (basically, the path of
+    fluid parts) doesn't have sources or sinks, it doesn't \Pclump up\Q or
     disappear, motion simply transfers thuough the fluid.
 
-    <item*|(1.7)>One way to derive this is consider the ``momentum'' density.
+    <item*|(1.7)>One way to derive this is consider the \Pmomentum\Q density.
     It should have units of momentum per volume. The length unit in the
     momentum will essentially make this a mass flux, that is,
 
@@ -207,8 +207,8 @@
     </eqnarray*>
 
     which is the momentum density flux tensor of (1.8). Note that this is a
-    sort of ``continuity equation'' for a vector field rather than for a
-    scalar. Given that we need a ``current term'' for a continuity equation
+    sort of \Pcontinuity equation\Q for a vector field rather than for a
+    scalar. Given that we need a \Pcurrent term\Q for a continuity equation
     that we need to take a gradient of (here, on the right hand side of
     (1.8)), this necessitates usage of a tensor, specifically, a bivector in
     this case.
@@ -226,15 +226,37 @@
     note that such a change, then, is an internal process, while <math|Q>,
     the part that actually talks about external losses/gains or frictional
     losses/gains (although friction is usually a loss, amiright).
+
+    <item*|(1.19)>To get this form, note that for general quantity
+    <math|\<chi\>>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<frac|\<partial\>\<rho\>|\<partial\>\<chi\>>>|<cell|=>|<cell|<frac|\<partial\>|\<partial\>\<chi\>><around*|(|<frac|1|V>|)>>>|<row|<cell|>|<cell|=>|<cell|-<frac|1|V<rsup|2>><frac|\<partial\>V|\<partial\>\<chi\>>>>|<row|<cell|>|<cell|=>|<cell|-\<rho\><rsup|2><frac|\<partial\>V|\<partial\>\<chi\>>.>>>>
+    </eqnarray*>
+
+    From this
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<frac|\<partial\>\<rho\>|\<partial\>t>>|<cell|=>|<cell|-<frac|\<partial\>|\<partial\>x><around*|(|\<rho\>u<rsub|x>|)>>>|<row|<cell|\<Rightarrow\><frac|\<partial\>V|\<partial\>t>>|<cell|=>|<cell|V<rsup|2><frac|\<partial\>|\<partial\>x><around*|(|\<rho\>u<rsub|x>|)>>>|<row|<cell|>|<cell|=>|<cell|V<rsup|2>\<rho\><frac|\<partial\>|\<partial\>x>u<rsub|x>+V<rsup|2>u<rsub|x><frac|\<partial\>|\<partial\>x>\<rho\>>>|<row|<cell|\<Rightarrow\><frac|\<partial\>V|\<partial\>t>+u<rsub|x><frac|\<partial\>|\<partial\>x>V>|<cell|=>|<cell|<frac|\<partial\>|\<rho\>\<partial\>m>u<rsub|x>>>|<row|<cell|\<Rightarrow\><frac|D
+      V|D t>>|<cell|=>|<cell|<frac|\<partial\>|\<partial\>m>u<rsub|x>.>>>>
+    </eqnarray*>
+
+    <item*|Fig. 1.1>Let
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|u<around*|(|x,0|)>>|<cell|=>|<cell|0,>>|<row|<cell|\<Delta\>\<rho\><around*|(|x,0|)>>|<cell|=>|<cell|\<Delta\>\<rho\><rsub|0>\<theta\><around*|(|x-L/2|)>\<theta\><around*|(|x+L/2|)>>>|<row|<cell|\<Rightarrow\>\<Delta\>\<rho\><around*|(|x,t|)>>|<cell|=>|<cell|<frac|\<Delta\>\<rho\><rsub|0>|2><around*|[|\<theta\><around*|(|x-c
+      t-L/2|)>\<theta\><around*|(|x-c t+L/2|)>+\<theta\><around*|(|x+c
+      t-L/2|)>\<theta\><around*|(|x+c t+L/2|)>|]>.>>>>
+    </eqnarray*>
   </description>
 
-  \;
+  \ 
 </body>
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|?|../../../../.TeXmacs/texts/scratch/no_name_2.tm>>
-    <associate|auto-2|<tuple|1.1|?|../../../../.TeXmacs/texts/scratch/no_name_2.tm>>
+    <associate|auto-1|<tuple|1|?>>
+    <associate|auto-2|<tuple|1.1|?>>
     <associate|auto-3|<tuple|1.1.1|?>>
   </collection>
 </references>
