@@ -248,16 +248,41 @@
       t-L/2|)>\<theta\><around*|(|x-c t+L/2|)>+\<theta\><around*|(|x+c
       t-L/2|)>\<theta\><around*|(|x+c t+L/2|)>|]>.>>>>
     </eqnarray*>
+
+    \;
   </description>
 
-  \ 
+  <subsection|Section 6>
+
+  This is probably the most important part of the first Chapter. After
+  transforming to a set of coordinates motivated by the solutions of the form
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|<frac|d x|d t>
+    >|<cell|=>|<cell|u+c>>|<row|<cell|<frac|d x|d t>>|<cell|=>|<cell|u-c>>>>
+  </eqnarray*>
+
+  One obtains a set of curves through spacetime that conserve the "Riemannian
+  invariants." The basic cool thing is that onces one specifies these
+  quantities, defined in 1.43, on the initial conditions and boundaries, one
+  can obtain the future state at all times by propagating these quantities
+  along the curves. Since they are conserved along the curves, one gets the
+  solutions at a spacetime point later by finding which
+  <math|J<rsub|\<pm\>>>'s are connected to that point from the initial
+  conditions, and no other dynamics required, just a linear combination of
+  the initial conditions. Of course, the curves <em|are> dynamic, and so one
+  doesn't avoid having to solve the full problem, but in likewise manner as
+  finite element, one can approximate the \Qcurves\Q by inifinitesimal
+  triangles (the curves are "straight" on a small enough scale, ie., constant
+  velocity), so one can obtain the future state this way, wash, rinse, and
+  repeat and obtain the future solution.
 </body>
 
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|?>>
     <associate|auto-2|<tuple|1.1|?>>
-    <associate|auto-3|<tuple|1.1.1|?>>
+    <associate|auto-3|<tuple|1.2|?>>
   </collection>
 </references>
 
