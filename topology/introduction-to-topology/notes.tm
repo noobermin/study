@@ -1,4 +1,4 @@
-<TeXmacs|1.99.2>
+<TeXmacs|1.99.3>
 
 <style|generic>
 
@@ -75,30 +75,30 @@
   intuitionally, I'll define something that might describe this
   <around|(|unfortunately, I'm too lazy to make it too concrete, bear with
   me...|)> Consider the <math|<around*|[|0,1|]>\<subset\>\<bbb-R\>>, and
-  consider the set of open sets from <math|<around*|(|0-\<varepsilon\>,1/2+\<varepsilon\>|)>,<around*|(|1/2-\<varepsilon\>,1/4+\<varepsilon\>|)>,\<ldots\>,<around*|(|1/2<rsup|n>-\<varepsilon\>,1/2<rsup|n+1>+\<varepsilon\>|)>>,
-  obviously defineable for any natural number <math|n> and real number
-  <math|\<varepsilon\>>. For a given <math|\<varepsilon\>>, this defines an
-  open cover of the interval <math|<around*|[|0,1|]>>, by including all
-  <math|n\<in\>\<bbb-N\>> in this open cover. This is not uncountable, but it
-  is inifinite. Basically, the idea here is that we have a set of open ranges
-  that overlap and span smaller and smaller ranges from 1/2 to 1,
-  obstensively. This supposes then, that for a given <math|\<varepsilon\>>,
-  there is a single, be it large, <math|n<rprime|'>> for which the sets from
-  <math|<around*|(|0-\<varepsilon\>,1/2+\<varepsilon\>|)>> to
-  <math|<around*|(|1/2<rsup|n<rprime|'>>-\<varepsilon\>,1/2<rsup|n<rprime|'>+1>+\<varepsilon\>|)>>
+  consider the set of open sets from <math|<around*|(|0-\<varepsilon\>,1/2+\<varepsilon\>|)>,<around*|(|1/2-\<varepsilon\>,3/4+\<varepsilon\>|)>,\<ldots\>,<around*|(|1/2<rsup|n>-\<varepsilon\>,1-1/2<rsup|n+1>+\<varepsilon\>|)>>,
+  obviously defineable for any natural number <math|n> and positive real
+  number <math|\<varepsilon\>>. For a given <math|\<varepsilon\>>, this
+  defines an open cover of the interval <math|<around*|[|0,1|]>>, by
+  including all <math|n\<in\>\<bbb-N\>> in this open cover. This is not
+  uncountable, but it is inifinite. Basically, the idea here is that we have
+  a set of open ranges that overlap and span smaller and smaller ranges from
+  1/2 to 1, obstensively. This supposes then, that for a given
+  <math|\<varepsilon\>>, there is a single, be it large, <math|n<rprime|'>>
+  for which the sets from <math|<around*|(|0-\<varepsilon\>,1/2+\<varepsilon\>|)>>
+  to <math|<around*|(|1/2<rsup|n<rprime|'>>-\<varepsilon\>,1-1/2<rsup|n<rprime|'>+1>+\<varepsilon\>|)>>
   covers <math|<around*|[|0,1|]>>. Clearly, when the <math|n<rprime|'>> we
   need is given by the constraint
 
   <\eqnarray*>
-    <tformat|<table|<row|<cell|<frac|1|2<rsup|n+1>>+\<varepsilon\>>|<cell|\<gtr\>>|<cell|1>>>>
+    <tformat|<table|<row|<cell|1-<frac|1|2<rsup|n+1>>+\<varepsilon\>>|<cell|\<gtr\>>|<cell|1>>>>
   </eqnarray*>
 
-  which is solveable for a given <math|\<varepsilon\>>. More importantly, for
-  a fixed <math|\<varepsilon\>>, <math|n> can be defined, as any integer
-  <math|n>
+  which is solveable for a given positive, real <math|\<varepsilon\>>. More
+  importantly, for a fixed <math|\<varepsilon\>>, <math|n> can be defined, as
+  any integer <math|n>
 
   <\eqnarray*>
-    <tformat|<table|<row|<cell|n>|<cell|\<gtr\>>|<cell|log<rsub|2><around*|(|<frac|1|1-\<varepsilon\>>|)>-1.>>>>
+    <tformat|<table|<row|<cell|n>|<cell|\<gtr\>>|<cell|log<rsub|2><around*|(|<frac|1|\<varepsilon\>>|)>.>>>>
   </eqnarray*>
 
   For <math|\<varepsilon\>=1>, the subset
@@ -117,25 +117,40 @@
   characteristic of topological spaces you can add on, similar to how you can
   add on connectedness.
 
+  <\remark>
+    As an aside, for negative <math|\<varepsilon\>>, the open sets won't
+    cover all of <math|<around*|[|1,0|]>>. Moreover, for
+    <math|\<varepsilon\>=0>, one <em|does not> get a cover of
+    <math|<around*|[|0,1|]>>, for that collection of sets <math|C<rsub|n>>
+    with
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|C<rsub|n>>|<cell|=>|<cell|<around*|(|1/2<rsup|n>-\<varepsilon\>,1-1/2<rsup|n+1>+\<varepsilon\>|)>>>|<row|<cell|<around*|{|C<rsub|n>|}>>|<cell|=>|<cell|<around*|(|0,1/2|)>,<around*|(|1/2,3/4|)>,<around*|(|1/4,7/8|)>\<ldots\>>>>>
+    </eqnarray*>
+
+    which does not contain <math|0> or 1 for any finite <math|n>, although we
+    get arbitrarily close.
+  </remark>
+
   <subsubsection|Compactness as...compactness>
 
   Something that helps is when things in math (or physics (or computer
   science (or...))) are named based on something familiar that is analogous
   to it. Obviously, groups and rings are violations of this, but open and
   closed match well. Something that might hurt my understand of compactness
-  is that closed and bounded doesn't sound ``compact'' and neither does ``has
-  the property where ever open cover has a finite sub-cover'' sound like
-  ``compact'' In fact, compact seems to imply ``full'' or ``dense,'' while
-  ``finite sub-cover'' seems to imply that it isn't as dense as it sounds.
+  is that closed and bounded doesn't sound \Pcompact\Q and neither does \Phas
+  the property where ever open cover has a finite sub-cover\Q sound like
+  \Pcompact\Q In fact, compact seems to imply \Pfull\Q or \Pdense,\Q while
+  \Pfinite sub-cover\Q seems to imply that it isn't as dense as it sounds.
 
   Another way to think of compactness is the idea of an accumulation point.
   The idea is that one can always find subsets of a given compact set that
-  get ``arbitrarly close'' to these points, kind of like limits from baby's
+  get \Parbitrarly close\Q to these points, kind of like limits from baby's
   calculus (accumulation points are often termed limit points, I think). This
   idea, that you can always have a subset that gets close to a point in a
-  compact set sounds more ``compact'', in that you have then, an infinite
+  compact set sounds more \Pcompact\Q, in that you have then, an infinite
   number of subsets that approach a given point. Apparently, these two
-  definitions, an accumulation point, and ``finite subcoverable'' are
+  definitions, an accumulation point, and \Pfinite subcoverable\Q are
   equivalent for metric spaces, and I think, general compact spaces too(?).
   We'll see.
 
@@ -177,6 +192,8 @@
     one can obtain a set of <math|i<rsub|x>\<in\>I> for each <math|x\<in\>U>,
     and since <math|U> is finite, <math|i<rsub|x>> is finite.
   </enumerate-numeric>
+
+  \;
 </body>
 
 <\initial>
@@ -187,16 +204,16 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|?|?>>
-    <associate|auto-10|<tuple|2.2.3|?>>
-    <associate|auto-2|<tuple|1|?>>
-    <associate|auto-3|<tuple|1.1|?>>
-    <associate|auto-4|<tuple|1.1.1|?>>
-    <associate|auto-5|<tuple|2|?>>
-    <associate|auto-6|<tuple|2.1|?>>
-    <associate|auto-7|<tuple|2.2|?>>
-    <associate|auto-8|<tuple|2.2.1|?>>
-    <associate|auto-9|<tuple|2.2.2|?>>
+    <associate|auto-1|<tuple|?|1>>
+    <associate|auto-10|<tuple|2.2.3|2>>
+    <associate|auto-2|<tuple|1|1>>
+    <associate|auto-3|<tuple|1.1|1>>
+    <associate|auto-4|<tuple|1.1.1|1>>
+    <associate|auto-5|<tuple|2|1>>
+    <associate|auto-6|<tuple|2.1|1>>
+    <associate|auto-7|<tuple|2.2|1>>
+    <associate|auto-8|<tuple|2.2.1|1>>
+    <associate|auto-9|<tuple|2.2.2|2>>
   </collection>
 </references>
 
@@ -238,6 +255,10 @@
       <with|par-left|<quote|2tab>|2.2.2<space|2spc>Compactness
       as...compactness <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9>>
+
+      <with|par-left|<quote|2tab>|2.2.3<space|2spc>Exercises
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-10>>
     </associate>
   </collection>
 </auxiliary>
